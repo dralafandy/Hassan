@@ -276,7 +276,9 @@ def generate_meals(df, min_calories, max_calories, min_fat, max_fat, num_breakfa
 
 def main():
     st.title("مخطط الوجبات اليومي")
-
+if st.button("Open Main 3.py"):
+        subprocess.Popen(["streamlit", "run", "Main 3.py"])
+    
     min_calories = st.sidebar.number_input("السعرات الحرارية الدنيا", min_value=0, value=0)
     max_calories = st.sidebar.number_input("السعرات الحرارية القصوى", min_value=0, value=2500)
     num_breakfast = st.sidebar.number_input("عدد وجبات الفطور", min_value=0, value=2)
