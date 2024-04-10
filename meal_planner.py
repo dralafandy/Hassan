@@ -276,8 +276,6 @@ def generate_meals(df, min_calories, max_calories, min_fat, max_fat, num_breakfa
 
 def main():
     st.title("مخطط الوجبات اليومي")
-if st.button("Open Main 3.py"):
-        subprocess.Popen(["streamlit", "run", "Main 3.py"])
     
     min_calories = st.sidebar.number_input("السعرات الحرارية الدنيا", min_value=0, value=0)
     max_calories = st.sidebar.number_input("السعرات الحرارية القصوى", min_value=0, value=2500)
@@ -312,6 +310,7 @@ if st.button("Open Main 3.py"):
             st.subheader(meal_type)
             meal_data_styled = meal_data.style.apply(lambda row: [f"background-color: {color_mapping.get(meal_type, '#FFFFFF')}" for _ in row], axis=1)
             st.write(meal_data_styled)
-
+     if st.button("Open Main 3.py"):
+       subprocess.Popen(["streamlit", "run", "Main 3.py"])
 if __name__ == "__main__":
     main()
