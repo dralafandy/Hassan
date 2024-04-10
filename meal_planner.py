@@ -311,6 +311,6 @@ def main():
             meal_data_styled = meal_data.style.apply(lambda row: [f"background-color: {color_mapping.get(meal_type, '#FFFFFF')}" for _ in row], axis=1)
             st.write(meal_data_styled)
      if st.button("Open Main 3.py"):
-       subprocess.Popen(["streamlit", "run", "Main 3.py"])
+        subprocess.Popen(["streamlit", "run", "Main 3.py"])
 if __name__ == "__main__":
     main()
